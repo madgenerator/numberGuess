@@ -1,15 +1,15 @@
 import random
 # 정답 숫자 생성 : 모두 다를것
 answerNum = [0, 0, 0]
-answerNum[0] = random.randrange(1, 9, 1)
+answerNum[0] = random.randint(1,9) #random.randrange(1, 10, 1)
 
-answerNum[1] = random.randrange(1, 9, 1)
+answerNum[1] = random.randrange(1, 10, 1)
 while (answerNum[0] == answerNum[1]):
-  answerNum[1] = random.randrange(1, 9, 1)
+  answerNum[1] = random.randrange(1, 10, 1)
 
-answerNum[2] = random.randrange(1, 9, 1)
-while (answerNum[0] == answerNum[1] or answerNum[1] == answerNum[2]):
-  answerNum[2] = random.randrange(1, 9, 1)
+answerNum[2] = random.randrange(1, 10, 1)
+while (answerNum[0] == answerNum[2] or answerNum[1] == answerNum[2]):
+  answerNum[2] = random.randrange(1, 10, 1)
 
 print(answerNum)
 
